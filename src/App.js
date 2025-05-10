@@ -6,7 +6,7 @@ import { PersistGate } from "redux-persist/integration/react";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { onAuthStateChanged } from "firebase/auth";
-import { auth } from "./firebase";
+//import { auth } from "./firebase";
 
 // Components
 import Header from "./components/Header";
@@ -28,16 +28,16 @@ import store, { persistor } from "./utils/appStore";
 const AppLayout = () => {
   const [authChecked, setAuthChecked] = React.useState(false);
 
-  useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, () => {
-      setAuthChecked(true);
-    });
-    return () => unsubscribe();
-  }, []);
+  // useEffect(() => {
+  //   const unsubscribe = onAuthStateChanged(auth, () => {
+  //     setAuthChecked(true);
+  //   });
+  //   return () => unsubscribe();
+  // }, []);
 
-  if (!authChecked) {
-    return <div className="flex justify-center items-center h-screen">Loading...</div>;
-  }
+  // if (!authChecked) {
+  //   return <div className="flex justify-center items-center h-screen">Loading...</div>;
+  // }
 
   return (
     <Provider store={store}>
