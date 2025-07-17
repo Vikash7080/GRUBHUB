@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "React Js by Akshay Saini",
   "scripts": {
-    "start": "parcel index2.html",
-    "build": "parcel build index2.html",
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
     "test": "jest"
   },
   "keywords": [
